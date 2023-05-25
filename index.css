@@ -1,23 +1,27 @@
 :root {
-    --navColor: #333333;
-
+    --navBgColor: linear-gradient(45deg, #BABABA, #707070);
+    --navfontCol: #3B3B3B;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+
 }
 
 header{
-    background-color: var(--navColor);
+    background-color: var(--navBgColor);
 }
 li {
     list-style: none;
 }
+.logoNav{
+    max-height: 75px;
+}
 
 a{
-    color: #ffffff;
+    color: var(--navfontCol);
     text-decoration: none;
 }
 
@@ -49,7 +53,7 @@ a{
 }
 
 .hamburger{
-    display:none; /* need to be none*/
+    display:none;
     cursor: pointer;
 }
 
@@ -60,7 +64,7 @@ a{
     margin: 5px auto;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    background-color: red; /* needs to be #ffffff */
+    background-color: var(--navfontCol);
 }
 
 @media(max-width: 768px){
@@ -80,11 +84,11 @@ a{
 
     .nav-menu{
         position: fixed;
-        left: -100%; /*-100% */
+        left: -100%;
         top: 70px;
         gap: 0px;
         flex-direction: column-reverse;
-        background-color: var(--navColor);
+        background-color: var(--navBgColor);
         width: 100%;
         text-align: center;
         transition: 0.3s ;
